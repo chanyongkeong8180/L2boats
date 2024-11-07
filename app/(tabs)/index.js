@@ -59,6 +59,6 @@ const styles = StyleSheet.create({
         borderColor: '#006994',
         textAlign: 'center',
         textTransform: 'uppercase',
-        margin: 30,
+        margin: 30
     }
 });
