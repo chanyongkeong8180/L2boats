@@ -1,16 +1,36 @@
 import React from 'react';
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image, StyleSheet} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome6';
 
 const Boat = ({icon, name, description, picture}) => {
     return (
-        <View style={{backgroundColor: '#E9E9E9'}}>
-            <Text style={{fontSize: 20, color: '#006994'}}>
+        <View style={styles.exterior}>
+            <Text style={styles.text}>
                 <Icon name={icon} size={20}/>
                 {name}</Text>
-            <Text style={{color: '#006994'}}>{description}</Text>
-            <Image source={picture} />
+            <Text style={styles.text}>{description}</Text>
+            <Image source={picture} style={styles.image} />
         </View>
     );
 };
 export default Boat;
+
+const styles = StyleSheet.create({
+    exterior: {
+        flex: 1,
+        flexDirection: 'column',
+        backgroundColor: '#E9E9E9',
+        borderWidth: 2,
+        borderColor: '#006994',
+        margin: 10
+    },
+    text: {
+        color: '#006994',
+        textAlign: 'center',
+        margin: 10
+    },
+    image: {
+        maxWidth: '100%',
+        marginBottom: 10
+    }
+});

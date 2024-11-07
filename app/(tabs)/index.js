@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, ScrollView} from 'react-native';
+import {View, Text, ScrollView, StyleSheet} from 'react-native';
 import Boat from './components/Boat';
 
 class AllBoats extends React.Component {
@@ -7,7 +7,7 @@ class AllBoats extends React.Component {
         return (
             <View>
                 <ScrollView>
-                    <Text style={{color: '#006994'}}>GetABoat - For Sale</Text>
+                    <Text style={styles.text}>GetABoat - For Sale</Text>
                     <Boat icon="sailboat"
                           name="SEA RAY 500 SUNDANCER"
                           description="Contoured lines and dramatic styling reveal
@@ -48,3 +48,17 @@ class AllBoats extends React.Component {
     }
 }
 export default AllBoats;
+
+const styles = StyleSheet.create({
+    text: {
+        flex: 1,
+        flexDirection: 'row',
+        backgroundColor: '#E9E9E9',
+        color: '#006994',
+        borderWidth: 2,
+        borderColor: '#006994',
+        textAlign: 'center',
+        textTransform: 'uppercase',
+        margin: 30,
+    }
+});
