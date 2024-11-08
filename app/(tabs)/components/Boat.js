@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/FontAwesome6';
 const Boat = ({icon, name, description, picture}) => {
     return (
         <View style={styles.exterior}>
-            <Text style={styles.text}>
+            <Text style={[styles.text, {textAlign: 'center'}]}>
                 <Icon name={icon} size={20}/>
                 {name}</Text>
             <Text style={styles.text}>{description}</Text>
@@ -26,7 +26,6 @@ const styles = StyleSheet.create({
     },
     text: {
         color: '#006994',
-        textAlign: 'center',
         margin: 10
     },
     image: {
